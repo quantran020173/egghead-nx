@@ -1,0 +1,23 @@
+{
+  "root": "libs/commons-ui/commons",
+  "sourceRoot": "libs/commons-ui/commons/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/commons-ui/commons/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/commons-ui/commons"],
+      "options": {
+        "jestConfig": "libs/commons-ui/commons/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
